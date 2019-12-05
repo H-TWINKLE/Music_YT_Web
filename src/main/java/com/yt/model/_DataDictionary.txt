@@ -1,0 +1,48 @@
+Table: authorlist
+-----------------+--------------+------+-----+---------+---------
+ Field           | Type         | Null | Key | Default | Remarks 
+-----------------+--------------+------+-----+---------+---------
+ authorlist_id   | INT(10)      | NO   | PRI |         |         
+ authorlist_user | INT(10)      | YES  |     |         |         
+ authorlist_name | VARCHAR(255) | YES  |     |         |         
+ authorlist_pic  | VARCHAR(255) | YES  |     |         |         
+ authorlist_date | DATETIME(19) | YES  |     |         |         
+-----------------+--------------+------+-----+---------+---------
+
+Table: comment
+------------------+--------------+------+-----+---------+---------
+ Field            | Type         | Null | Key | Default | Remarks 
+------------------+--------------+------+-----+---------+---------
+ comment_id       | INT(10)      | NO   | PRI |         |         
+ comment_playlist | BIGINT(19)   | YES  |     |         |         
+ comment_user     | INT(10)      | YES  |     |         |         
+ comment_content  | TEXT(65535)  | YES  |     |         |         
+ comment_date     | DATETIME(19) | YES  |     |         |         
+------------------+--------------+------+-----+---------+---------
+
+Table: playlist
+---------------+--------------+------+-----+---------+---------
+ Field         | Type         | Null | Key | Default | Remarks 
+---------------+--------------+------+-----+---------+---------
+ playlist_id   | INT(10)      | NO   | PRI |         |         
+ playlist_user | BIGINT(19)   | YES  |     |         |         
+ playlist_name | TEXT(65535)  | YES  |     |         |         
+ playlist_pic  | TEXT(65535)  | YES  |     |         |         
+ playlist_date | DATETIME(19) | YES  |     |         |         
+---------------+--------------+------+-----+---------+---------
+
+Table: user
+------------------+--------------+------+-----+---------+---------
+ Field            | Type         | Null | Key | Default | Remarks 
+------------------+--------------+------+-----+---------+---------
+ user_id          | INT(10)      | NO   | PRI |         |         
+ user_name        | VARCHAR(255) | YES  |     |         |         
+ user_admin       | VARCHAR(255) | YES  |     |         |         
+ user_pass        | VARCHAR(255) | YES  |     |         |         
+ user_email       | VARCHAR(255) | YES  |     |         |         
+ user_photo       | VARCHAR(255) | YES  |     |         |         
+ user_role        | INT(10)      | YES  |     |         |         
+ user_create_time | DATETIME(19) | YES  |     |         |         
+ user_update_time | DATETIME(19) | YES  |     |         |         
+------------------+--------------+------+-----+---------+---------
+

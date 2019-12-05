@@ -1,0 +1,41 @@
+#@_layout()
+
+#define _main()
+
+
+<section class="panel panel-default">
+    <header class="panel-heading font-bold">
+       个人信息
+    </header>
+    <div class="panel-body">
+        <form class="form-horizontal" method="post" action="#(base??)/auth/update">
+
+            <div class="form-group">
+                <label class="col-sm-2 control-label">名字</label>
+                <div class="col-sm-10">
+                    <input name="u.user_name" type="text" class="form-control rounded" value="#(session.user.user_name??)">
+                </div>
+            </div>
+            <div class="line line-dashed b-b line-lg pull-in"></div>
+
+            <div class="form-group">
+                <label class="col-sm-2 control-label">邮箱</label>
+                <div class="col-sm-10">
+                    <input name="u.user_email" type="email" class="form-control rounded" value="#(session.user.user_email??)">
+                </div>
+            </div>
+            <div class="line line-dashed b-b line-lg pull-in"></div>
+
+
+            <div class="form-group">
+                <div class="col-sm-4 col-sm-offset-2">
+                    <button type="submit" class="btn btn-primary">修改</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
+
+
+
+#end
